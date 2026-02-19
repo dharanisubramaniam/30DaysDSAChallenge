@@ -1,0 +1,46 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.util.Arrays;
+
+class ReverseArray
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+
+    //using swap
+
+        int[] num = {2, 3, 6, 7};
+
+        int left = 0, right = num.length - 1;
+        while (left < right) {
+            int temp = num[left];
+            num[left] = num[right];
+            num[right] = temp;
+
+            left++;
+            right--;
+        }
+
+
+    //alternate way using extra array
+        System.out.println(Arrays.toString(num));
+	    int[] num={2,3,6,7};
+	    int[] out = new int[num.length];
+	    int j=0;
+	    for(int i=num.length-1;i>=0;i--){
+	        out[j] = num[i];
+	        j++;
+	    }
+	   System.out.println(Arrays.toString(out));
+        //another way
+       List<Integer> list = Arrays.asList(num);
+        Collections.reverse(list);
+        System.out.println(list);
+	}
+   
+}
+
+
+        
+  
